@@ -14,6 +14,7 @@ const Input = (props) => {
         {props.label}
       </label>
       <input
+        aria-label="input"
         type="text"
         required
         className="flex-1 rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm sm:text-sm"
