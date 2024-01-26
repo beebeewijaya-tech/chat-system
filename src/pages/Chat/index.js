@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {useLocation} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {addChat} from "../../store/chat/reducer"; // Components
 import Button from "../../components/Button";
@@ -17,6 +17,7 @@ const Chat = () => {
     const [page, setPage] = useState(1);
     const [chatList, setChatList] = useState([]);
     const location = useLocation();
+    const navigate = useNavigate();
 
     const chatReducer = useSelector((state) => state.chat);
     const dispatch = useDispatch();
@@ -53,7 +54,11 @@ const Chat = () => {
 
     useEffect(() => {
         const {state} = location;
-        setName(state.name);
+        if (state?.name) {
+            setName(state.name);
+        } else {
+            navigate("/")
+        }
     }, [location]);
 
     useEffect(() => {
