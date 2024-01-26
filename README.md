@@ -2,6 +2,10 @@
 
 Chat system application, simple one, not require any backend, only use some sort of local storage for this
 
+# Demo Video
+
+![Demo App](./docs/demo.gif)
+
 # Project structure
 
 ```
