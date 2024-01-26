@@ -96,10 +96,10 @@ const Chat = () => {
             <div className="w-1/2 mb-3">
                 {chatList.map((item, index) => (
                     <div
-                        className="flex w-full bg-slate-600 rounded shadow-md mb-3"
+                        className={`flex w-full bg-slate-700 rounded shadow-md mb-3 ${name === item.name && 'bg-indigo-800'}`}
                         key={index}
                     >
-                        <div className="px-5 py-3  ">
+                        <div className={`px-5 py-3 ${name === item.name && 'w-full text-right'}`}>
                             <p className="text-sm font-semibold text-white">{item.name}</p>
                             <p className="mt-1 truncate text-xs text-gray-300">
                                 {item.message}
