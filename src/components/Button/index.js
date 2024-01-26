@@ -9,6 +9,7 @@ const Button = (props) => {
   return (
     <button
       type="submit"
+      aria-label="button"
       className="flex-none rounded-md bg-indigo-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-md hover:bg-indigo-600"
       onClick={props.onSubmit}
     >
